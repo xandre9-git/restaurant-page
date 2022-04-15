@@ -4,4 +4,10 @@ div {
 
 nav {
   display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+li {
+  list-style: none;
 }
