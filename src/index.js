@@ -1,5 +1,7 @@
-function deezNuts(){
-  console.log('deez');
+import './styles.css';
+
+function theScript(){
+  console.log('script executed');
 }
 
-deezNuts();
+theScript();
