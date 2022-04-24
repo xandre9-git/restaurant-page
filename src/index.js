@@ -44,16 +44,10 @@ function footer() {
   return footer
 }
 
-
-
 const content = document.getElementById('content');
-console.log(content);
 
-// divContent();
-// content.appendChild(restaurantName());
 content.appendChild(navBar());
 content.appendChild(footer());
-
 
 // DOM
 
