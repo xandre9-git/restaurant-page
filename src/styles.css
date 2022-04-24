@@ -1,13 +1,37 @@
+h1 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+
 div {
   text-align: center;
 }
 
 nav {
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-weight: bold;
+  width: 25%;
 }
 
 li {
   list-style: none;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
 }
