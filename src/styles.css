@@ -35,3 +35,9 @@ footer {
   bottom: 0px;
   text-align: center;
 }
+
+.splash-image {
+  margin-top: 3%;
+  border-radius: 1.5%;
+  width: 33%;
+}
