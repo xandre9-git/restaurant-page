@@ -1,4 +1,5 @@
 import "./styles.css";
+import Whet from "./images/whet.jpg"
 
 function restaurantName() {
   console.log("script executed");
@@ -37,6 +38,38 @@ function navBar() {
   return nav;
 }
 
+const whet = new Image();
+whet.src = Whet;
+whet.classList = 'splash-image';
+console.log(whet);
+
+const restaurantDescription = () => {
+
+  const pitchDiv = document.createElement('div');
+  const p1 = document.createElement('p');
+  const p2 = document.createElement('p');
+  const p3 = document.createElement('p');
+  const p4 = document.createElement('p');
+
+  p1.textContent = 'The finest foods in the world, at your selection.';
+  p2.textContent = 'At The Selection you gain access to the creme de la creme.';
+  p3.textContent = 'Our chefs are world renowned and are passionate about providing our guests with the best dining experience in the world.';
+  p4.textContent = 'Indulge yourself at our lovely locations that are culturally inspired with exclusive art.';
+
+  pitchDiv.appendChild(p1);
+  pitchDiv.appendChild(p2);
+  pitchDiv.appendChild(p3);
+  pitchDiv.appendChild(p4);
+
+{/* <div id="pitch">At The Selection you gain access to the creme de la creme. <p>Our chefs are world renowned and are
+  passionate about providing our guests with the best dining experience in the world. <p>Indulge yourself at our
+  lovely locations that are culturally inspired with exclusive art.</p></div>
+<br></br> */}
+  return pitchDiv;
+
+}
+
+
 
 function footer() {
   const footer = document.createElement('footer');
@@ -45,30 +78,22 @@ function footer() {
 }
 
 const content = document.getElementById('content');
+// console.log(content);
+
 
 content.appendChild(navBar());
+content.appendChild(whet);
+content.appendChild(restaurantDescription());
 content.appendChild(footer());
 
-// DOM
-
-/* <h1>The Selection</h1>
-<nav>
-  <ul>
-    <li>Reservations</li>
-    <li>Menu</li>
-    <li>About Us</li>
-  </ul>
-</nav>
 
 
-<p>The finest foods in the world, at your selection.</p>
+{/* <p>The finest foods in the world, at your selection.</p>
 
 <div id="pitch">At The Selection you gain access to the creme de la creme. <p>Our chefs are world renowned and are
   passionate about providing our guests with the best dining experience in the world. <p>Indulge yourself at our
   lovely locations that are culturally inspired with exclusive art.</p></div>
-<br>
-<img src="../src/images/whet.jpg"> */
+<br> */}
 
 
-// console.log(body);
-// console.log(content);
+
