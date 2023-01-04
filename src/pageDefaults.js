@@ -39,6 +39,13 @@ function pageDefaults() {
     locationAnchor.classList = "nav-anchor-link";
     locationAnchor.setAttribute("href", "https://www.google.com");
     ul.appendChild(locationListItem);
+    const contactListItem = document.createElement("li");
+    const contactAnchor = document.createElement("a");
+    contactListItem.appendChild(contactAnchor);
+    contactAnchor.textContent = "CONTACT";
+    contactAnchor.classList = "nav-anchor-link";
+    contactAnchor.setAttribute("href", "https://www.google.com");
+    ul.appendChild(contactListItem);
     nav.appendChild(ul);
     
     return nav;
