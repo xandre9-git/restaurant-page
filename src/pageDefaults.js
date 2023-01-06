@@ -1,10 +1,10 @@
-import frontPage from "./frontPage"
+import frontPage from "./frontPage";
 import menuPage from "./menuPage";
 
-
-const content = document.getElementById("content");
-
 function pageDefaults() {
+  const content = document.getElementById("content");
+  const bodyContent = document.createElement("div");
+  bodyContent.classList = "body-content";
 
   function restaurantName() {
     console.log("script executed");
@@ -31,7 +31,7 @@ function pageDefaults() {
     menuListItem.appendChild(menuAnchor);
     menuAnchor.textContent = "MENU";
     menuAnchor.classList = "nav-anchor-link";
-    menuAnchor.addEventListener("click", menuPage)
+    menuAnchor.addEventListener("click", menuPage);
     ul.appendChild(menuListItem);
     const locationListItem = document.createElement("li");
     const locationAnchor = document.createElement("a");
@@ -48,7 +48,6 @@ function pageDefaults() {
     contactAnchor.setAttribute("href", "https://www.google.com");
     ul.appendChild(contactListItem);
     nav.appendChild(ul);
-    
     return nav;
   }
 
@@ -59,11 +58,11 @@ function pageDefaults() {
   }
 
   content.appendChild(navBar());
+  content.appendChild(bodyContent);
+  bodyContent.appendChild(frontPage());
+  content.appendChild(footer());
 
-  return { navBar, footer }
-
+  return { content, bodyContent };
 }
-
-
 
 export default pageDefaults;
