@@ -1,17 +1,17 @@
 import Whet from "./images/whet.jpg";
 import pageDefaults from "./pageDefaults";
 
-const functionExtractionSource = pageDefaults();
+pageDefaults();
 
-
-function frontPage() {
-  const restaurantDescription = () => {
+export default function frontPage() {
+  const restaurantDescription = () => {    
+    const pitchDiv = document.createElement("div");
+    pitchDiv.classList = "pitch";
     const whet = new Image();
     whet.src = Whet;
     whet.classList = "splash-image";
-    content.appendChild(whet);
+    pitchDiv.appendChild(whet);
     const br = document.createElement("br");
-    const pitchDiv = document.createElement("div");
     const strong = document.createElement("strong");
     const p2 = document.createElement("p");
     const p3 = document.createElement("p");
@@ -30,10 +30,8 @@ function frontPage() {
     pitchDiv.appendChild(p4);
     return pitchDiv;
   };
-  content.appendChild(restaurantDescription());
-  content.appendChild(functionExtractionSource.footer());
+  return content.appendChild(restaurantDescription());
 }
 
-frontPage();
 
-export default frontPage;
+
