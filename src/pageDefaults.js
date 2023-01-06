@@ -1,4 +1,5 @@
 import frontPage from "./frontPage"
+import menuPage from "./menuPage";
 
 
 const content = document.getElementById("content");
@@ -30,7 +31,7 @@ function pageDefaults() {
     menuListItem.appendChild(menuAnchor);
     menuAnchor.textContent = "MENU";
     menuAnchor.classList = "nav-anchor-link";
-    menuAnchor.setAttribute("href", "https://www.google.com");
+    menuAnchor.addEventListener("click", menuPage)
     ul.appendChild(menuListItem);
     const locationListItem = document.createElement("li");
     const locationAnchor = document.createElement("a");
