@@ -2,7 +2,7 @@ import frontPage from "./frontPage";
 import pageDefaults from "./pageDefaults.js";
 import { footer } from "./pageDefaults.js";
 
-const menu = [
+const entreeMenu = [
   {
     class: "entree",
     entree: "8 OUNCE WAGYU STEAK",
@@ -44,15 +44,15 @@ export default function menuPage(){
   entrees.appendChild(entreesTitle);
   divMenu.appendChild(entrees)
   let i = 0;
-  for (;i < menu.length; i++) {
+  for (;i < entreeMenu.length; i++) {
     const entree = document.createElement('div');
-    entree.classList = menu[i].class;
+    entree.classList = entreeMenu[i].class;
     entrees.appendChild(entree)
     const entreeTitle = document.createElement('h2');
-    entreeTitle.textContent = menu[i].entree;
+    entreeTitle.textContent = entreeMenu[i].entree;
     const entreeSide = document.createElement('div');
     entreeSide.classList = "entree-desc";
-    entreeSide.textContent = menu[i].sides;
+    entreeSide.textContent = entreeMenu[i].sides;
     entree.appendChild(entreeTitle);
     entree.appendChild(entreeSide)
   }
