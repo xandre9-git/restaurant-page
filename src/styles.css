@@ -57,7 +57,7 @@ footer {
 #content {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
+  min-height: 97.5vh;
 }
 
 .splash-image {
@@ -71,6 +71,10 @@ footer {
 .pitch {
   display: flex;
   flex-direction: column;
+}
+
+.entree {
+  margin-bottom: 2%;
 }
 
 .entree > h2 {
