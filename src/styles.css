@@ -73,7 +73,7 @@ footer {
   flex-direction: column;
 }
 
-.entree {
+.entree, .drinks {
   margin-bottom: 2%;
 }
 
@@ -81,6 +81,10 @@ footer {
   margin: 0;
 }
 
-div.entrees > h1 {
+.drinks > h2 {
+  margin: 0;
+}
+
+div.entrees > h1, div.drinks > h1 {
   margin-bottom: 2%;
 }
