@@ -24,14 +24,29 @@ const entreeMenu = [
     sides: "KALE, AVOCADOES, AND CRUSHED PECANS"
   }
 ]
+
+const drinkMenu = [
+  {
+    class: "drinks",
+    drink: "LAVENDER HIBISCUS PUNCH",
+    desc: "LAVENDER LEMONADE WITH A TOUCH OF HIBISCUS"
+  },
+  {
+    class: "drinks",
+    drink: "CUCUMBER PEPPERMINT TEA",
+    desc: "ICED PEPPERMINT TEA WITH SLICED CUCUMBERS"
+  },
+  {
+    class: "drinks",
+    drink: "SPARKLING BLOOD ORANGE DRINK",
+    desc: "CARBONATED WATER MIXED WITH BLOOD ORANGE JUICE"
+  }
+]
   
 
 export default function menuPage(){
 
-
-
   const bodyDoc = document.getElementsByClassName('body-content');
-  console.log(bodyDoc);
   bodyDoc[0].remove();
   const footer = document.getElementById('footer');
   footer.remove();
@@ -43,6 +58,13 @@ export default function menuPage(){
   entreesTitle.textContent = "ENTREES"
   entrees.appendChild(entreesTitle);
   divMenu.appendChild(entrees)
+  const drinks = document.createElement('div');
+  drinks.classList = "drinks";
+  const drinksTitle = document.createElement('h1');
+  drinksTitle.textContent = "DRINKS";
+  drinks.appendChild(drinksTitle);
+  divMenu.appendChild(drinks);
+
   let i = 0;
   for (;i < entreeMenu.length; i++) {
     const entree = document.createElement('div');
@@ -57,9 +79,24 @@ export default function menuPage(){
     entree.appendChild(entreeSide)
   }
 
-  
+  let j = 0;
+  for (;j < drinkMenu.length; j++) {
+    const drink = document.createElement('div');
+    drink.classList = drinkMenu[j].class;
+    drinks.appendChild(drink)
+    const drinkTitle = document.createElement('h2');
+    drinkTitle.textContent = drinkMenu[j].drink;
+    const drinkDesc = document.createElement('div');
+    drinkDesc.classList = "drink-desc";
+    drinkDesc.textContent = drinkMenu[j].desc;
+    drink.appendChild(drinkTitle);
+    drink.appendChild(drinkDesc)
+  }
+
+
   const content = document.getElementById('content');
-  console.log('Firing.')
   content.appendChild(divMenu);
   content.appendChild(footer);
+
+  return content;
 }
