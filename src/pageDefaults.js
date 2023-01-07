@@ -1,6 +1,13 @@
 import frontPage from "./frontPage";
 import menuPage from "./menuPage";
 
+function footer() {
+  const footer = document.createElement("footer");
+  footer.id = "footer";
+  footer.textContent = "Designed by Xandre9";
+  return footer;
+}
+
 function pageDefaults() {
   const content = document.getElementById("content");
   const bodyContent = document.createElement("div");
@@ -51,18 +58,14 @@ function pageDefaults() {
     return nav;
   }
 
-  function footer() {
-    const footer = document.createElement("footer");
-    footer.textContent = "Designed by Xandre9";
-    return footer;
-  }
+
 
   content.appendChild(navBar());
   content.appendChild(bodyContent);
   bodyContent.appendChild(frontPage());
   content.appendChild(footer());
 
-  return { content, bodyContent };
+  return { content, bodyContent};
 }
 
-export default pageDefaults;
+export { pageDefaults, footer}
