@@ -10,23 +10,26 @@ const menu = [
   },
   {
     class: "entree",
-    entree: "Alaskan Salmon",
-    sides: "Wild Rice and Spinach"
+    entree: "ALASKAN SALMON",
+    sides: "WILD RICE AND SPINACH"
   },
   {
     class: "entree",
-    entree: "Honey Barbecued Chicken Breast",
-    sides: "Whole Wheat Couscous and Chopped Cabbage"
+    entree: "HONEY BARBECUED CHICKEN BREAST",
+    sides: "WHOLE WHEAT COUSCOUS AND CHOPPED CABBAGE"
   },
   {
     class: "entree",
-    entree: "Roasted Sweet Potato Salad",
-    sides: "Kale, Avocadoes, and Crushed Pecans"
+    entree: "ROASTED SWEET POTATO SALAD",
+    sides: "KALE, AVOCADOES, AND CRUSHED PECANS"
   }
 ]
   
 
 export default function menuPage(){
+
+
+
   const bodyDoc = document.getElementsByClassName('body-content');
   console.log(bodyDoc);
   bodyDoc[0].remove();
@@ -40,16 +43,21 @@ export default function menuPage(){
   entreesTitle.textContent = "ENTREES"
   entrees.appendChild(entreesTitle);
   divMenu.appendChild(entrees)
-  const entree = document.createElement('div');
-  entree.classList = menu[0].class;
-  entrees.appendChild(entree)
-  const entreeTitle = document.createElement('h2');
-  entreeTitle.textContent = menu[0].entree;
-  const entreeSide = document.createElement('div');
-  entreeSide.classList = "entree-desc";
-  entreeSide.textContent = menu[0].sides;
-  entree.appendChild(entreeTitle);
-  entree.appendChild(entreeSide)
+  let i = 0;
+  for (;i < menu.length; i++) {
+    const entree = document.createElement('div');
+    entree.classList = menu[i].class;
+    entrees.appendChild(entree)
+    const entreeTitle = document.createElement('h2');
+    entreeTitle.textContent = menu[i].entree;
+    const entreeSide = document.createElement('div');
+    entreeSide.classList = "entree-desc";
+    entreeSide.textContent = menu[i].sides;
+    entree.appendChild(entreeTitle);
+    entree.appendChild(entreeSide)
+  }
+
+  
   const content = document.getElementById('content');
   console.log('Firing.')
   content.appendChild(divMenu);
