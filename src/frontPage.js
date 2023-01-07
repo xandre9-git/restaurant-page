@@ -1,8 +1,6 @@
 import Whet from "./images/whet.jpg";
 import pageDefaults from "./pageDefaults";
 
-pageDefaults();
-
 export default function frontPage() {
   const restaurantDescription = () => {    
     const pitchDiv = document.createElement("div");
