@@ -50,20 +50,23 @@ export default function menuPage(){
   bodyDoc[0].remove();
   const footer = document.getElementById('footer');
   footer.remove();
-  const divMenu = document.createElement('div');
-  divMenu.classList = 'body-content';
+  const bodyContentContainer = document.createElement('div');
+  bodyContentContainer.classList = 'body-content';
+  const entreesAndDrinksContainer = document.createElement('div');
+  entreesAndDrinksContainer.classList = "entrees-drinks";
+  bodyContentContainer.appendChild(entreesAndDrinksContainer);
   const entrees = document.createElement('div');
   entrees.classList = "entrees";
   const entreesTitle = document.createElement('h1');
   entreesTitle.textContent = "ENTREES"
   entrees.appendChild(entreesTitle);
-  divMenu.appendChild(entrees)
+  entreesAndDrinksContainer.appendChild(entrees)
   const drinks = document.createElement('div');
   drinks.classList = "drinks";
   const drinksTitle = document.createElement('h1');
   drinksTitle.textContent = "DRINKS";
   drinks.appendChild(drinksTitle);
-  divMenu.appendChild(drinks);
+  entreesAndDrinksContainer.appendChild(drinks);
 
   let i = 0;
   for (;i < entreeMenu.length; i++) {
@@ -95,7 +98,7 @@ export default function menuPage(){
 
 
   const content = document.getElementById('content');
-  content.appendChild(divMenu);
+  content.appendChild(bodyContentContainer);
   content.appendChild(footer);
 
   return content;
