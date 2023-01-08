@@ -51,7 +51,7 @@ export default function menuPage(){
   const footer = document.getElementById('footer');
   footer.remove();
   const divMenu = document.createElement('div');
-  divMenu.classList = 'food-drinks-menu';
+  divMenu.classList = 'body-content';
   const entrees = document.createElement('div');
   entrees.classList = "entrees";
   const entreesTitle = document.createElement('h1');
