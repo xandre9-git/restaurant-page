@@ -46,14 +46,14 @@ const drinkMenu = [
 
 export default function menuPage(){
 
-  const bodyDoc = document.getElementsByClassName('body-content');
-  bodyDoc[0].remove();
+  const bodyDoc = document.getElementById('body-content');
+  bodyDoc.remove();
   const footer = document.getElementById('footer');
   footer.remove();
   const bodyContentContainer = document.createElement('div');
-  bodyContentContainer.classList = 'body-content';
+  bodyContentContainer.id = 'body-content';
   const entreesAndDrinksContainer = document.createElement('div');
-  entreesAndDrinksContainer.classList = "entrees-drinks";
+  entreesAndDrinksContainer.id = "entrees-drinks";
   bodyContentContainer.appendChild(entreesAndDrinksContainer);
   const entrees = document.createElement('div');
   entrees.classList = "entrees";
