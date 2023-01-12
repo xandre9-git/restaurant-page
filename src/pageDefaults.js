@@ -11,7 +11,7 @@ function footer() {
 function pageDefaults() {
   const content = document.getElementById("content");
   const bodyContent = document.createElement("div");
-  bodyContent.classList = "body-content";
+  bodyContent.id = "body-content";
 
   function restaurantName() {
     console.log("script executed");
@@ -19,7 +19,6 @@ function pageDefaults() {
     const restaurantAnchor = document.createElement("a");
     restaurantAnchor.textContent = "THE SELECTION";
     restaurantAnchor.classList = "nav-anchor-link";
-    // restaurantAnchor.setAttribute('href', "https://www.google.com")
     restaurantAnchor.addEventListener("click", () => {
       frontPage();
     });
