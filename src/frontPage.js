@@ -2,7 +2,25 @@ import Whet from "./images/whet.jpg";
 import pageDefaults from "./pageDefaults";
 
 export default function frontPage() {
-  const restaurantDescription = () => {    
+  const bodyDoc = document.getElementById('body-content');
+  let firstChild = bodyDoc.firstElementChild;
+  console.log(`The first child of bodyDoc is: ${firstChild}`);
+  console.log(typeof(bodyDoc));
+  let keys = Object.keys(bodyDoc);
+  console.log(keys);
+  console.log(bodyDoc);
+  // console.log(`Currently showing: ${bodyDoc[0].children}`);
+  // console.log(content);
+
+  // if first child of div.body-content does not have a class name of "pitch" delete the first child
+  // if (bodyDoc[0].classList != "pitch") {
+  //   // console.log("First child is not pitch.")
+  //   // console.log(bodyDoc.firstChild.nodeName);
+  // }
+  // bodyDoc[0].remove();
+  const restaurantDescription = () => {   
+    console.log(`bodyDoc value in frontPage(): ${bodyDoc.childNodes}`) 
+
     const pitchDiv = document.createElement("div");
     pitchDiv.classList = "pitch";
     const whet = new Image();
@@ -28,7 +46,8 @@ export default function frontPage() {
     pitchDiv.appendChild(p4);
     return pitchDiv;
   };
-  return content.appendChild(restaurantDescription());
+  console.log(`bodyDoc at the moment: ${bodyDoc}`);
+  return bodyDoc.appendChild(restaurantDescription());
 }
 
 
