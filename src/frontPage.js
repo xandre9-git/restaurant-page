@@ -5,7 +5,6 @@ export default function frontPage() {
   const bodyDoc = document.getElementById('body-content');
   let firstChild = bodyDoc.firstElementChild;
 
-
   const restaurantDescription = () => {  
     // if first child of div.body-content is not div.pitch, delete node and recreate
     if (firstChild != null && firstChild.className != "pitch") {
