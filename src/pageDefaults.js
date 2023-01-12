@@ -19,9 +19,6 @@ function pageDefaults() {
     const restaurantAnchor = document.createElement("a");
     restaurantAnchor.textContent = "THE SELECTION";
     restaurantAnchor.classList = "nav-anchor-link";
-    // restaurantAnchor.addEventListener("click", () => {
-    //   frontPage();
-    // });
     h1.appendChild(restaurantAnchor);
     return h1;
   }
@@ -56,8 +53,6 @@ function pageDefaults() {
     nav.appendChild(ul);
     return nav;
   }
-
-
 
   content.appendChild(navBar());
   content.appendChild(bodyContent);
