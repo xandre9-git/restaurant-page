@@ -1,27 +1,3 @@
-const entreeMenu = [
-  {
-    class: "entree",
-    entree: "8 OUNCE WAGYU STEAK",
-    sides: "GARLIC MASHED POTATOES AND ASPARAGUS", 
-  },
-  {
-    class: "entree",
-    entree: "ALASKAN SALMON",
-    sides: "WILD RICE AND SPINACH"
-  },
-  {
-    class: "entree",
-    entree: "HONEY BARBECUED CHICKEN BREAST",
-    sides: "WHOLE WHEAT COUSCOUS AND CHOPPED CABBAGE"
-  },
-  {
-    class: "entree",
-    entree: "ROASTED SWEET POTATO SALAD",
-    sides: "KALE, AVOCADOES, AND CRUSHED PECANS"
-  }
-]
-
-
 function contactPage() {
   const bodyDoc = document.getElementById('body-content');
   bodyDoc.remove();
@@ -48,7 +24,6 @@ function contactPage() {
   const emailTitle = document.createElement('h1');
   emailTitle.textContent = "EMAIL US"
 
-
   locationSection.appendChild(locationsTitle);
   locationSection.appendChild(phoneNumTitle);
   locationSection.appendChild(emailTitle);
@@ -56,12 +31,11 @@ function contactPage() {
   contactUs.appendChild(locationSection);
   contactUs.appendChild(phoneNumberSection);
   contactUs.appendChild(emailSection);
-  // const telTitle = document.createElement('h1');
-  // telTitle.textContent = "CALL US";
-  // locationSection.appendChild(telTitle);
+
   const content = document.getElementById('content');
   content.appendChild(bodyContentContainer);
   content.appendChild(footer);
+  
   return content;
 }
 
