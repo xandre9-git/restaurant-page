@@ -25,8 +25,8 @@ function contactPage() {
   emailTitle.textContent = "EMAIL US"
 
   locationSection.appendChild(locationsTitle);
-  locationSection.appendChild(phoneNumTitle);
-  locationSection.appendChild(emailTitle);
+  phoneNumberSection.appendChild(phoneNumTitle);
+  emailSection.appendChild(emailTitle);
 
   contactUs.appendChild(locationSection);
   contactUs.appendChild(phoneNumberSection);
