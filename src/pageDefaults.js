@@ -18,7 +18,7 @@ function pageDefaults() {
     const h1 = document.createElement("h1");
     const restaurantAnchor = document.createElement("a");
     restaurantAnchor.textContent = "THE SELECTION";
-    restaurantAnchor.classList = "nav-anchor-link";
+    restaurantAnchor.id = "the-selection-link";
     h1.appendChild(restaurantAnchor);
     return h1;
   }
@@ -33,22 +33,13 @@ function pageDefaults() {
     const menuAnchor = document.createElement("a");
     menuListItem.appendChild(menuAnchor);
     menuAnchor.textContent = "MENU";
-    menuAnchor.classList = "nav-anchor-link";
-    menuAnchor.addEventListener("click", menuPage);
+    menuAnchor.id = "menu-link";
     ul.appendChild(menuListItem);
-    const locationListItem = document.createElement("li");
-    const locationAnchor = document.createElement("a");
-    locationListItem.appendChild(locationAnchor);
-    locationAnchor.textContent = "LOCATIONS";
-    locationAnchor.classList = "nav-anchor-link";
-    locationAnchor.setAttribute("href", "https://www.google.com");
-    ul.appendChild(locationListItem);
     const contactListItem = document.createElement("li");
     const contactAnchor = document.createElement("a");
     contactListItem.appendChild(contactAnchor);
     contactAnchor.textContent = "CONTACT";
-    contactAnchor.classList = "nav-anchor-link";
-    contactAnchor.setAttribute("href", "https://www.google.com");
+    contactAnchor.id = "contact-link";
     ul.appendChild(contactListItem);
     nav.appendChild(ul);
     return nav;
