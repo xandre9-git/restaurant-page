@@ -72,6 +72,11 @@ footer {
 .pitch {
   display: flex;
   flex-direction: column;
+  margin-top: 4%;
+}
+
+.entrees, #contact-us {
+  margin-top: 5%;
 }
 
 .entree, .drinks {
