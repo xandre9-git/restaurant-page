@@ -1,13 +1,16 @@
 @font-face {
-  font-family: "neoteric";
-  src: url("fonts/neoteric-32a8-webfont.woff2") format("woff2"), url("fonts/neoteric-32a8-webfont.woff") format("woff");
+  font-family: 'Wilmina';
+  src:url('./fonts/Wilmina.ttf.woff') format('woff'),
+      url('./fonts/Wilmina.ttf.svg#Wilmina') format('svg'),
+      url('./fonts/Wilmina.ttf.eot'),
+      url('./fonts/Wilmina.ttf.eot?#iefix') format('embedded-opentype'); 
   font-weight: normal;
   font-style: normal;
 }
 
-
 body {
   background-image: url(./images/stone-background.jpg);
+  font: 1em "Wilmina", monospace;
 }
 
 h1 {
