@@ -1,9 +1,12 @@
 import Whet from "./images/whet.jpg";
-import pageDefaults from "./pageDefaults";
 
 export default function frontPage() {
   const bodyDoc = document.getElementById('body-content');
   let firstChild = bodyDoc.firstElementChild;
+
+  if (firstChild != null && firstChild.className === "pitch") {
+    return;
+  }
 
   const restaurantDescription = () => {  
     // if first child of div.body-content is not div.pitch, delete node and recreate
@@ -11,6 +14,7 @@ export default function frontPage() {
       // delete the node
       firstChild.remove();
     }
+
     const pitchDiv = document.createElement("div");
     pitchDiv.classList = "pitch";
     const whet = new Image();
@@ -37,7 +41,7 @@ export default function frontPage() {
 
     return pitchDiv;
   };
-
+  
   return bodyDoc.appendChild(restaurantDescription());
 }
 
