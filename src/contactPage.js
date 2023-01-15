@@ -24,13 +24,27 @@ function contactPage() {
   const emailTitle = document.createElement('h1');
   emailTitle.textContent = "EMAIL US"
 
+  const locationsParagraph = document.createElement('p');
+  locationsParagraph.setAttribute('style', 'white-space: pre;');
+  locationsParagraph.textContent = "12345 FOOD LANE \r\n"
+  locationsParagraph.textContent += "HUNGRY, ST 10101";
+
+  const phoneNumberParagraph = document.createElement('p');
+  phoneNumberParagraph.textContent = "(101) 001-0010"
+
+  const emailParagraph = document.createElement('p');
+  emailParagraph.textContent = "inquiry@theselection.com";
+
   locationSection.appendChild(locationsTitle);
   phoneNumberSection.appendChild(phoneNumTitle);
   emailSection.appendChild(emailTitle);
 
   contactUs.appendChild(locationSection);
+  contactUs.appendChild(locationsParagraph);
   contactUs.appendChild(phoneNumberSection);
+  contactUs.appendChild(phoneNumberParagraph);
   contactUs.appendChild(emailSection);
+  contactUs.appendChild(emailParagraph);
 
   const content = document.getElementById('content');
   content.appendChild(bodyContentContainer);
