@@ -30,21 +30,30 @@ function contactPage() {
   locationsParagraph.textContent += "HUNGRY, ST 10101";
 
   const phoneNumberParagraph = document.createElement('p');
-  phoneNumberParagraph.textContent = "(101) 001-0010"
+  const phoneNumber = document.createElement('a');
+  phoneNumber.setAttribute("href", "tel:(101) 001-0010");
+  phoneNumber.textContent = "(101) 001-0010";
+  phoneNumberParagraph.appendChild(phoneNumber);
+
 
   const emailParagraph = document.createElement('p');
-  emailParagraph.textContent = "inquiry@theselection.com";
+  const emailAddress = document.createElement('a');
+  emailAddress.setAttribute('href', 'mailto:inquiry@theselection.com');
+  emailAddress.textContent = 'inquiry@theselection.com';
+  emailParagraph.appendChild(emailAddress);
+
 
   locationSection.appendChild(locationsTitle);
+  locationSection.appendChild(locationsParagraph);
   phoneNumberSection.appendChild(phoneNumTitle);
+  phoneNumberSection.appendChild(phoneNumberParagraph);
   emailSection.appendChild(emailTitle);
+  emailSection.appendChild(emailParagraph);
 
   contactUs.appendChild(locationSection);
-  contactUs.appendChild(locationsParagraph);
   contactUs.appendChild(phoneNumberSection);
-  contactUs.appendChild(phoneNumberParagraph);
   contactUs.appendChild(emailSection);
-  contactUs.appendChild(emailParagraph);
+
 
   const content = document.getElementById('content');
   content.appendChild(bodyContentContainer);
