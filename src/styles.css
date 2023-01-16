@@ -73,6 +73,10 @@ footer {
   font-size: 12px;
 }
 
+#the-selection-link {
+  margin-left: 10px;
+}
+
 #content {
   display: grid;
   grid-template-rows: auto 1fr auto;
