@@ -32,7 +32,7 @@ export default function frontPage() {
     p3.textContent =
       "Our chefs are world renowned and are passionate about providing our guests with the best dining experience in the world.";
     p4.textContent =
-      "Indulge yourself at our lovely locations that are culturally inspired with exclusive art.";
+      "Indulge yourself at our lovely restaurant which is culturally inspired with exclusive art.";
     pitchDiv.appendChild(strong);
     pitchDiv.appendChild(br);
     pitchDiv.appendChild(p2);
