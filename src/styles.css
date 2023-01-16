@@ -11,6 +11,8 @@
 body {
   background-image: url(./images/stone-background.jpg);
   font: 1em "Wilmina", monospace;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -19,14 +21,18 @@ h1 {
   font-size:30px;
 }
 
+.nav-bar a {
+  color:  #EBE6E3;
+}
+
 a {
   text-decoration: none;
-  color: #2c1a0f;
+  color: black;
   cursor: pointer;
 }
 
 a:hover {
-  color: grey;
+  color: turquoise;
 }
 
 a:visited {
@@ -44,6 +50,7 @@ div {
 nav {
   display: flex;
   justify-content: space-between;
+  background-color: #2c1a0f
 }
 
 ul {
@@ -86,8 +93,12 @@ footer {
   /* margin-top: 1%; */
 }
 
-.entrees, #contact-us {
+#contact-us {
   margin-top: 5%;
+}
+
+.entrees {
+  margin-top: 2%;
 }
 
 .entree, .drinks {
